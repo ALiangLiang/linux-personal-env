@@ -1,20 +1,3 @@
-# alias for CSCC
-alias sc='schedule'
-alias duty='ssh csduty'                                    
-
-# ls alias
-alias ll='ls -l'                                          
-alias la='ls -a'                                          
-alias l='ls -al'                                        
-
-# tmux alias
-alias t='tmux att'                                         
-
-# git alias
-alias gc='git commit'
-alias gs='git status'
-alias gp='git push'
-
 bindkey "\e[1~" beginning-of-line # Home                 
 bindkey "\e[7~" beginning-of-line # Home rxvt                                                                      
 bindkey "\e[2~" overwrite-mode    # Ins                  
@@ -107,3 +90,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# alias for CSCC
+alias sc='schedule'
+alias duty='ssh csduty'                                    
+
+# ls alias
+alias ll='ls -l'                                          
+alias la='ls -a'                                          
+alias l='ls -al'                                        
+
+# tmux alias
+alias t='tmux att'                                         
+
+# git alias
+alias gc='git commit'
+alias gs='git status'
+alias gp='git push'
+
