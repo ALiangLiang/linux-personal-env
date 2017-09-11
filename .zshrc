@@ -107,4 +107,5 @@ alias t='tmux att'
 alias gc='git commit'
 alias gs='git status'
 alias gp='git push'
-
+alias gd='git diff'
+alias gl='git log'
