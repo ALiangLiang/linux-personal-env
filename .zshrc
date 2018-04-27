@@ -91,6 +91,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias c='clear'
+
 # alias for CSCC
 alias sc='schedule'
 alias duty='ssh csduty'                                    
@@ -104,8 +106,13 @@ alias l='ls -al'
 alias t='tmux att'                                         
 
 # git alias
+alias g='git'
 alias gc='git commit'
 alias gs='git status'
 alias gp='git push'
 alias gd='git diff'
 alias gl='git log'
+alias gck='git checkout'
+alias gpl='git pull'
+alias gt='git tag'
+alias grm='git rm'
