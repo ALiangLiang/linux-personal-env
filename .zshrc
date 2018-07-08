@@ -103,7 +103,7 @@ alias la='ls -a'
 alias l='ls -al'                                        
 
 # tmux alias
-alias t='tmux att'                                         
+alias t='tmux att -d'                                         
 
 # git alias
 alias g='git'
@@ -116,3 +116,6 @@ alias gck='git checkout'
 alias gpl='git pull'
 alias gt='git tag'
 alias grm='git rm'
+alias gcl='git clone'
+alias grs='git reset'
+alias grb='git rebase'
