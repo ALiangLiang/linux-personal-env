@@ -103,7 +103,7 @@ alias la='ls -a'
 alias l='ls -al'                                        
 
 # tmux alias
-alias t='tmux att'                                         
+alias t='tmux att -d'                                         
 
 # git alias
 alias g='git'
@@ -118,6 +118,8 @@ alias gt='git tag'
 alias grm='git rm'
 alias gst='git stash'
 alias grs='git reset'
+alias gcl='git clone'
+alias grb='git rebase'
 
 alias gll='git log --pretty=format:"%C(Yellow)%h%Creset%x09%C(cyan)%ad%Creset%x09%s" --author="\(ALiangLiang\)\|\(wlliou\)" --date=format:"%Y-%m-%d %H:%M:%S" --reverse'
 
@@ -133,3 +135,4 @@ export PATH=$PATH:/home/wlliou/afl/afl-2.52b
 export AFL_PATH=/home/wlliou/afl/afl-2.52b
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
