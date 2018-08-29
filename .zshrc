@@ -116,3 +116,20 @@ alias gck='git checkout'
 alias gpl='git pull'
 alias gt='git tag'
 alias grm='git rm'
+alias gst='git stash'
+alias grs='git reset'
+
+alias gll='git log --pretty=format:"%C(Yellow)%h%Creset%x09%C(cyan)%ad%Creset%x09%s" --author="\(ALiangLiang\)\|\(wlliou\)" --date=format:"%Y-%m-%d %H:%M:%S" --reverse'
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:/home/wlliou/.config/composer/vendor/bin
+export PATH=$PATH:/home/wlliou/afl/afl-2.52b
+export AFL_PATH=/home/wlliou/afl/afl-2.52b
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
