@@ -102,10 +102,10 @@ alias ll='ls -l'
 alias la='ls -a'                                          
 alias l='ls -al'                                        
 
-# tmux alias
+# tmux aliases
 alias t='tmux att -d'                                         
 
-# git alias
+# git aliases
 alias g='git'
 alias gc='git commit'
 alias gs='git status'
@@ -122,6 +122,9 @@ alias gcl='git clone'
 alias grb='git rebase'
 
 alias gll='git log --pretty=format:"%C(Yellow)%h%Creset%x09%C(cyan)%ad%Creset%x09%s" --author="\(ALiangLiang\)\|\(wlliou\)" --date=format:"%Y-%m-%d %H:%M:%S" --reverse'
+
+# docker-compose aliases
+alias dc='docker-compose'
 
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
