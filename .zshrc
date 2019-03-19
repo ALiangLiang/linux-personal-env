@@ -120,6 +120,7 @@ alias gst='git stash'
 alias grs='git reset'
 alias gcl='git clone'
 alias grb='git rebase'
+alias gmv='git mv'
 
 alias gll='git log --pretty=format:"%C(Yellow)%h%Creset%x09%C(cyan)%ad%Creset%x09%s" --author="\(ALiangLiang\)\|\(wlliou\)" --date=format:"%Y-%m-%d %H:%M:%S" --reverse'
 
