@@ -107,6 +107,7 @@ alias t='tmux att -d'
 
 # git aliases
 alias g='git'
+alias gbr='git branch'
 alias gc='git commit'
 alias gs='git status'
 alias gp='git push'
