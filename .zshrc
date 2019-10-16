@@ -1,9 +1,9 @@
-bindkey "\e[1~" beginning-of-line # Home                 
-bindkey "\e[7~" beginning-of-line # Home rxvt                                                                      
-bindkey "\e[2~" overwrite-mode    # Ins                  
-bindkey "\e[3~" delete-char       # Delete                                                                         
-bindkey "\e[4~" end-of-line       # End                  
-bindkey "\e[8~" end-of-line       # End rxvt  
+bindkey "\e[1~" beginning-of-line # Home
+bindkey "\e[7~" beginning-of-line # Home rxvt
+bindkey "\e[2~" overwrite-mode    # Ins
+bindkey "\e[3~" delete-char       # Delete
+bindkey "\e[4~" end-of-line       # End
+bindkey "\e[8~" end-of-line       # End rxvt
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -95,15 +95,15 @@ alias c='clear'
 
 # alias for CSCC
 alias sc='schedule'
-alias duty='ssh csduty'                                    
+alias duty='ssh csduty'
 
 # ls alias
-alias ll='ls -l'                                          
-alias la='ls -a'                                          
-alias l='ls -al'                                        
+alias ll='ls -l'
+alias la='ls -a'
+alias l='ls -alh'
 
 # tmux aliases
-alias t='tmux att -d'                                         
+alias t='tmux att -d'
 
 # git aliases
 alias g='git'
