@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 alias c='clear'
 
 # alias for CSCC
-alias sc='schedule'
+alias sc='ssh sc -t schedule $1'
 alias duty='ssh csduty'
 
 # ls alias
