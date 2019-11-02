@@ -29,6 +29,9 @@ set wildmenu
 set wildmode=longest:full,full
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 
+" custom shortcut
+nnoremap <F5> :! ./%<CR>
+
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-emoji'
 Plug 'ervandew/supertab'
