@@ -144,3 +144,4 @@ export AFL_PATH=/home/wlliou/afl/afl-2.52b
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+stty stop undef
