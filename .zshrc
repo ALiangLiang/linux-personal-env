@@ -128,6 +128,18 @@ alias gmv='git mv'
 
 alias gll='git log --pretty=format:"%C(Yellow)%h%Creset%x09%C(cyan)%ad%Creset%x09%s" --author="\(ALiangLiang\)\|\(wlliou\)" --date=format:"%Y-%m-%d %H:%M:%S" --reverse'
 
+# pull target branch and rebase to current branch
+gplrb() {
+  git pull origin $1:$1 --ff-only
+  git rebase $1
+}
+
+# do above command and push
+gplrbp() {
+  gplrb $1
+  git push
+}
+
 # docker-compose aliases
 alias dc='docker-compose'
 
