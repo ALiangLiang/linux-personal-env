@@ -140,8 +140,8 @@ gplrbp() {
   git push
 }
 
-# docker-compose aliases
-alias dc='docker-compose'
+# docker compose aliases
+alias dc='docker compose'
 
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
