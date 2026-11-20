@@ -149,10 +149,9 @@ autoload -Uz compinit && compinit -i
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-export PATH=$PATH:/home/wlliou/.config/composer/vendor/bin
-export PATH=$PATH:/home/wlliou/afl/afl-2.52b
-export AFL_PATH=/home/wlliou/afl/afl-2.52b
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Load machine-specific local overrides if available
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 stty stop undef

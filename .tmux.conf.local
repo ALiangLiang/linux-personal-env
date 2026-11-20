@@ -267,7 +267,9 @@ set -g mouse on
 #set -g status-position top
 
 setw -g automatic-rename on # rename window to reflect current program
-bind _ split-window -h
+bind - split-window -v
+bind _ split-window -v
+bind | split-window -h
 bind > swap-pane -D       # swap current pane with the next one
 bind < swap-pane -U       # swap current pane with the previous one
 bind -r C-h previous-window # select previous window

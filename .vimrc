@@ -1,15 +1,17 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.vim/bundle/fzf
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'wakatime/vim-wakatime'
-Plugin 'posva/vim-vue'
-Plugin 'pangloss/vim-javascript'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-call vundle#end()
+
+" Plugins (managed by vim-plug)
+call plug#begin('~/.vim/plugged')
+Plug 'wakatime/vim-wakatime'
+Plug 'posva/vim-vue'
+Plug 'pangloss/vim-javascript'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-emoji'
+Plug 'ervandew/supertab'
+call plug#end()
+
 filetype plugin indent on
 
 set mouse=a
@@ -31,11 +33,6 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 
 " custom shortcut
 nnoremap <F5> :! ./%<CR>
-
-call plug#begin('~/.vim/plugged')
-Plug 'junegunn/vim-emoji'
-Plug 'ervandew/supertab'
-call plug#end()
 
 autocmd FileType make setlocal noexpandtab
 
