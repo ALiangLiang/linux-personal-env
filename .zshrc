@@ -5,8 +5,7 @@ bindkey "\e[3~" delete-char       # Delete
 bindkey "\e[4~" end-of-line       # End
 bindkey "\e[8~" end-of-line       # End rxvt
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# PATH and environment variables are configured in ~/.zshenv
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -145,9 +144,6 @@ alias dc='docker compose'
 
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
-
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

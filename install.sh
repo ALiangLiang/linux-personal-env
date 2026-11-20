@@ -5,8 +5,8 @@ set -e
 # Linux Personal Environment Bootstrap & Installer
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/ALiangLiang/linux-personal-env/master/install.sh | bash
-#   curl -fsSL https://raw.githubusercontent.com/ALiangLiang/linux-personal-env/master/install.sh | bash -s -- zsh vim
-#   ./install.sh [--all|zsh|tmux|vim]
+#   curl -fsSL https://raw.githubusercontent.com/ALiangLiang/linux-personal-env/master/install.sh | bash -s -- zsh vim nvm pnpm
+#   ./install.sh [--all|zsh|tmux|vim|nvm|pnpm]
 # ==============================================================================
 
 REPO_URL="https://github.com/ALiangLiang/linux-personal-env.git"
@@ -84,6 +84,7 @@ setup_zsh() {
         info "Oh My Zsh already installed."
     fi
 
+    backup_and_link "$DOTFILES_DIR/.zshenv" "$HOME/.zshenv"
     backup_and_link "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
     success "Zsh setup completed."
 }
@@ -139,6 +140,34 @@ setup_vim() {
 }
 
 # ------------------------------------------------------------------------------
+# NVM (Node Version Manager) Setup
+# ------------------------------------------------------------------------------
+setup_nvm() {
+    info "Setting up NVM (Node Version Manager)..."
+    if [ ! -d "$HOME/.nvm" ]; then
+        info "Installing NVM (v0.40.1)..."
+        PROFILE=/dev/null bash -c 'curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
+        success "NVM installed successfully."
+    else
+        info "NVM already installed at $HOME/.nvm."
+    fi
+}
+
+# ------------------------------------------------------------------------------
+# PNPM Setup
+# ------------------------------------------------------------------------------
+setup_pnpm() {
+    info "Setting up pnpm..."
+    if ! command -v pnpm >/dev/null 2>&1 && [ ! -f "$HOME/.local/share/pnpm/bin/pnpm" ] && [ ! -f "$HOME/.local/share/pnpm/pnpm" ]; then
+        info "Installing pnpm..."
+        PNPM_NO_MODIFY_PATH=1 curl -fsSL https://get.pnpm.io/install.sh | sh -
+        success "pnpm installed successfully."
+    else
+        info "pnpm already installed."
+    fi
+}
+
+# ------------------------------------------------------------------------------
 # Entry Point
 # ------------------------------------------------------------------------------
 main() {
@@ -153,6 +182,8 @@ main() {
                 setup_zsh
                 setup_tmux
                 setup_vim
+                setup_nvm
+                setup_pnpm
                 ;;
             zsh)
                 setup_zsh
@@ -163,8 +194,18 @@ main() {
             vim)
                 setup_vim
                 ;;
+            nvm)
+                setup_nvm
+                ;;
+            pnpm)
+                setup_pnpm
+                ;;
+            node)
+                setup_nvm
+                setup_pnpm
+                ;;
             -h|--help)
-                echo "Usage: $0 [all|zsh|tmux|vim]"
+                echo "Usage: $0 [all|zsh|tmux|vim|nvm|pnpm]"
                 exit 0
                 ;;
             *)
